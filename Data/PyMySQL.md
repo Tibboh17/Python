@@ -9,7 +9,7 @@
 # How to Use
 - Import the module.
 ```python
-import pymysql.cursor
+import pymysql.cursors
 ```
 - Connect to the database.
 ```python
