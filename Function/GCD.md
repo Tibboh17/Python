@@ -2,7 +2,7 @@
 - Greatest Common Divisor.
 - Implement using Euclidean algorithm.
 
-# Implemantation
+# Implementation
 ```pyhton
 def GCD(a, b):
     if b == 0:
