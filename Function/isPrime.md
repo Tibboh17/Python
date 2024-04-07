@@ -1,6 +1,6 @@
 # isPrime
 - A function that checks if the given number is prime number.
-- Implmentation by using division or the sieve of Eratosthenes.
+- Implment by using division or the sieve of Eratosthenes.
 
 # Implemetation with Division
 ```python
