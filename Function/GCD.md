@@ -3,7 +3,7 @@
 - Implement using Euclidean algorithm.
 
 # Implementation
-```pyhton
+```python
 def GCD(a, b):
     if b == 0:
         return a
