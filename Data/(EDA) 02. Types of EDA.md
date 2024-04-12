@@ -1,0 +1,8 @@
+# Univariate
+- 
+
+# Bivariate
+- 
+
+# Multivariate
+- 
