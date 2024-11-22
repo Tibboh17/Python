@@ -1,0 +1,8 @@
+# Folders
+Data
+Datasets
+
+# Files
+.env
+PyMongo.md
+PyMySQL.md
