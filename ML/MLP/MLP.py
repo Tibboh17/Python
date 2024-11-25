@@ -106,9 +106,16 @@ def evaluate_metrics(y_true, y_pred):
     ss_total = np.sum((y_true - np.mean(y_true)) ** 2)
     ss_residual = np.sum((y_true - y_pred) ** 2)
     r_square = 1 - (ss_residual / ss_total)
+    mape = np.mean(np.abs((y_true - y_pred) / y_true)) * 100
     print(f"MAE: {mae:.4f}")
+    print(f"MAPE: {mape:.4f}")
     print(f"MSE: {mse_value:.4f}")
     print(f"RMSE: {rmse:.4f}")
     print(f"R-square: {r_square:.4f}")
 
 evaluate_metrics(y_test, y_pred_test)
+
+plt.figure(figsize=(50, 6))
+plt.plot(y_test, marker='x')
+plt.plot(y_pred_test, marker='o')
+plt.show()
