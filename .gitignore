@@ -1,6 +1,7 @@
 # Folders
 Data
 Datasets
+ML/__pycache__
 
 # Files
 .env
