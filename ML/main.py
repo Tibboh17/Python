@@ -72,22 +72,29 @@ input_dim = x_train.shape[1]
 hidden_dim = 64
 output_dim = y_train.shape[1]
 
+# MLP
 mlp_model = MLP(
     input_dim=input_dim, 
-    hidden_dim=hidden_dim, 
-    output_dim=output_dim, 
+    hidden_dim=hidden_dim,
+    output_dim=output_dim
 )
 
-loss_list = train(mlp_model, x_train, y_train, epochs=1000, learning_rate=0.01)
+# RNN
+rnn_model = RNN(
+    input_dim=input_dim,
+    hidden_dim=hidden_dim,
+    output_dim=output_dim
+)
+
+loss_list = train(rnn_model, x_train, y_train, epochs=1000, learning_rate=0.01)
 
 plt.figure(figsize=(10, 6))
 plt.plot(loss_list)
 plt.show()
 
-y_pred, _ = mlp_model.forward(x_test_sorted)
+y_pred, _ = rnn_model.forward(x_test_sorted)
 
 plt.figure(figsize=(40, 6))
 plt.plot(y_test_sorted, marker='x')
 plt.plot(y_pred, marker='o')
 plt.show()
-
