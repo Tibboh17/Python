@@ -87,12 +87,10 @@ rnn_model = RNN(
 )
 
 loss_list = train(rnn_model, x_train, y_train, epochs=1000, learning_rate=0.01)
+y_pred, _ = rnn_model.forward(x_test_sorted)
 
 plt.figure(figsize=(10, 6))
 plt.plot(loss_list)
-plt.show()
-
-y_pred, _ = rnn_model.forward(x_test_sorted)
 
 plt.figure(figsize=(40, 6))
 plt.plot(y_test_sorted, marker='x')
